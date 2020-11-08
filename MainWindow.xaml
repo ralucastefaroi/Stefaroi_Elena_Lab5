@@ -1,0 +1,31 @@
+﻿<Window x:Class="Stefaroi_Elena_Lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stefaroi_Elena_Lab5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+ 
+        <Grid Name="grdMain" Loaded="grdMain_Loaded">
+        <Button Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="60,53,0,0" VerticalAlignment="Top" Height="22" Width="66" Click="btnNew_Click"/>
+        <Button Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="60,96,0,0" VerticalAlignment="Top" Height="23" Width="66" Click="btnEdit_Click"/>
+        <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="61,141,0,0" VerticalAlignment="Top" Height="23" Width="65" Click="btnDelete_Click"/>
+        <ListBox Name="lstPhones" Margin="279,10,182,207" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True"/>
+        <Button Name="btnExit"  Content="Exit" HorizontalAlignment="Left" Margin="61,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.199,0.52" Width="65" Height="40" FontWeight="Bold" Click="btnExit_Click"/>
+        <Button Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="279,246,0,0" VerticalAlignment="Top" Width="93" Click="btnPrevious_Click"/>
+        <Button Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="525,246,0,0" VerticalAlignment="Top" Width="93" Click="btnNext_Click"/>
+        <Label Name="lblPhoneNum" Content="Phone Number:" HorizontalAlignment="Left" Margin="279,296,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblSubscriber" Content="Subscriber: " HorizontalAlignment="Left" Margin="279,327,0,0" VerticalAlignment="Top" Width="93" />
+        <TextBox Name="txtPhoneNumber" HorizontalAlignment="Left" Margin="425,304,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="113" IsEnabled="False" Text="{Binding Path=Phonenum}"/>
+        <TextBox Name="txtSubscriber" HorizontalAlignment="Left" Margin="425,335,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="113" IsEnabled="False" Text="{Binding Path=Subscriber}"/>
+        <Button Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="279,379,0,0" VerticalAlignment="Top" Width="93" IsEnabled="False" Click="btnSave_Click"/>
+        <Button Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="525,379,0,0" VerticalAlignment="Top" Width="93" IsEnabled="False" Click="btnCancel_Click"/>
+        <Label Name="lblContractValue" Content="Value" HorizontalAlignment="Left" Margin="572,296,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
+        <Label Name="lblContractDate" Content="Date" HorizontalAlignment="Left" Margin="572,331,0,0" VerticalAlignment="Top" Height="26"/>
+        <TextBox Name="txtContractValue" HorizontalAlignment="Left" Margin="651,304,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="{Binding Path=Contract_value}"/>
+        <TextBox Name="txtContractDate"  HorizontalAlignment="Left" Margin="651,335,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="{Binding Path=Contract_date}"/>
+
+
+    </Grid>
+</Window>
